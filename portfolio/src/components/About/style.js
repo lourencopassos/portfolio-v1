@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-background-color: var(--navy);
+margin-top: 50px;
 `
 
 export const PhotoContainer = styled.div`
@@ -30,16 +30,17 @@ font-weight: 800;
 p {
   color: var(--slate);
   font-size: 24px;
+  display: block;
 }
 
+
+
 ` 
-
-
-
 
 export const Content = styled.div`
 display: flex;
 margin: 0 50px;
+justify-content: space-around;
 
 & > div {
   width: 50%;
@@ -70,7 +71,34 @@ p:last-child {
   padding-bottom: 15px;
 }
 
-
-
-
 `
+export const Skills = styled.div`
+align-self:   ;
+  ul.skills-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(140px, 200px));
+    padding: 0;
+    margin: 20px 0 0 0;
+    overflow: hidden;
+    list-style: none;
+    
+
+    li {
+      position: relative;
+      margin-bottom: 10px;
+      padding-left: 20px;
+      font-family: var(--font-mono);
+      font-size: var(--fz-xs);
+      color: var(--slate);
+
+      &:before {
+        content: '▹';
+        position: absolute;
+        left: 0;
+        color: var(--green);
+        font-size: var(--fz-sm);
+        line-height: 12px;
+      }
+    }
+  }
+`;
